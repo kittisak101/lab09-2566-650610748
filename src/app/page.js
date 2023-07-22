@@ -33,7 +33,7 @@ export default function Home() {
   };
 
   const nTask = tasks.length;
-  const completedTask = task.filter((task) => task.completed).length;
+  const completedTask = tasks.filter((task) => task.completed).length;
 
   return (
     // Main container
