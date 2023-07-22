@@ -9,6 +9,10 @@ export const Task = ({
     deleteTaskFunc(id);
   };
 
+  const doneBtnOnClick = () => {
+    toggleDoneTaskFunc(id);
+  };
+
   return (
     <div className="d-flex p-3 gap-2 align-items-center border-bottom">
       {/*
@@ -18,7 +22,9 @@ export const Task = ({
         <span>{title}</span>
       */}
       <span>{title}</span>
-      <button className="btn btn-success">Done</button>
+      <button className="btn btn-success" onClick={doneBtnOnClick}>
+        Done
+      </button>
       <button className="btn btn-danger" onClick={deleteBtnOnClick}>
         Delete
       </button>
